@@ -17,7 +17,14 @@ def main():
     target_hosts = input_file.read().splitlines()
 
     for host in target_hosts:
+        result = probe(gethostbyname(host))
+        if result[0] is not None:
+            result_string = "Host: {}\nTTL: {}\nRTT: {} ms\n".format(host, result[0], result[1])
+            output_file.write(result_string + "\n")
+        else:
 
+    input_file.close()
+    output_file.close()
 
 def probe(IP_address):
     ttl = TTL_START
@@ -30,6 +37,7 @@ def probe(IP_address):
     send_socket.setsockopt(SOL_IP, IP_TTL, ttl)
 
     try:
+        recv_socket.bind("", 33434)
         send_socket.sendto("", (dest, 33434))
         sent_time = time.time()
 
@@ -49,7 +57,12 @@ def probe(IP_address):
         ip_ttl, ip_protocol, ip_checksum = struct.unpack_from("bbH", ip_header)
 
         number_hops = ttl - ip_ttl + 1
+        rtt = 1000*(recvd_time - sent_time)
 
+        return number_hops, rtt
+    finally:
+        send_socket.close()
+        recv_socket.close()
 
 if __name__ == "__main__":
     main()
