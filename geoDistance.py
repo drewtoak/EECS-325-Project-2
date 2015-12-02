@@ -22,9 +22,12 @@ def locate_host(IP_address):
     response = 'http://freegeoip.net/json/{}'.format(IP_address)
     r = requests.get(response)
     j = json.loads(r.text)
+
     latitude = longitude = None
+
     latitude = j['latitude']
     longitude = j['longitude']
+
     print "Latitude: {}\nLongitude: {}\n".format(latitude, longitude)
     return latitude, longitude
 
