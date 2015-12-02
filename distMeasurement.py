@@ -46,7 +46,7 @@ def probe(IP_address):
     ttl = TTL_START
     remaining_time = TIMEOUT
     dest = gethostbyname(IP_address)
-    port = 80
+    port = 33434
 
     send_socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)
     recv_socket = socket(AF_INET, SOCK_RAW, IPPROTO_ICMP)
