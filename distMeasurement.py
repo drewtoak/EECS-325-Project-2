@@ -19,9 +19,13 @@ def main():
     for host in target_hosts:
         result = probe(gethostbyname(host))
         if result[0] is not None:
-            result_string = "Host: {}\nTTL: {}\nRTT: {} ms\n".format(host, result[0], result[1])
-            output_file.write(result_string + "\n")
+            output_result = "Host: {}\nHops: {}\nRTT: {} ms\n".format(host, result[0], result[1])
+            print output_result
+            output_file.write(output_result + "\n")
         else:
+            output_result = "Host: {}\nHost timed out.\n".format(host)
+            print output_result
+            output_file.write(output_result + "\n")
 
     input_file.close()
     output_file.close()
