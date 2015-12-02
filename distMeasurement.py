@@ -37,7 +37,7 @@ def probe(IP_address):
     dest = IP_address
     port = 33434
 
-    for retry in xrange(RETRIES)
+    for retry in xrange(RETRIES):
         send_socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)
         recv_socket = socket(AF_INET, SOCK_RAW, IPPROTO_ICMP)
 
