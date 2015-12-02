@@ -24,7 +24,7 @@ def main():
         else:
             raise Exception("Host location could not be found.")
 
-        output_result = "Host: {}\nIP address: {}\nDistance: {}\n".format(host, gethostbyname(host), shortest_distance)
+        output_result = "Host: {}\nIP address: {}\nDistance: {} km\n".format(host, gethostbyname(host), shortest_distance)
         print output_result
         output_file.write(output_result + "\n")
 
