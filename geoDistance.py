@@ -5,7 +5,7 @@ from math import *
 def main(dest_name):
     location = locate(gethostbyname(dest_name))
 
-def locate(IP_address):
+def locate_host(IP_address):
     response = urllib2.urlopen("freegeoip.net/xml/{}".format(IP_address)).read
     
 
