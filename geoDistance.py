@@ -5,6 +5,7 @@ from socket import gethostbyname
 from math import *
 
 def main(dest_name):
+    my_location = locate_self()
     location = locate_host(gethostbyname(dest_name))
 
 def locate_host(IP_address):
@@ -19,17 +20,28 @@ def locate_host(IP_address):
     #         longitude = float(line.replace("<Longitude>", "").replace("</Longitude>", ""))
     #
     # response_doc.close()
-    response = 'http://freegeoip.net/json/{}'.format(IP_address)
-    r = requests.get(response)
-    j = json.loads(r.text)
+
+    response = requests.get('http://freegeoip.net/json/{}'.format(IP_address))
+    doc = json.loads(response.text)
 
     latitude = longitude = None
 
-    latitude = j['latitude']
-    longitude = j['longitude']
+    latitude = doc['latitude']
+    longitude = doc['longitude']
 
     print "Latitude: {}\nLongitude: {}\n".format(latitude, longitude)
     return latitude, longitude
+
+def locate_self():
+    request = requests.get('http://ip.42.pl/raw')
+    my_IP_address = request.text
+
+    my_location = locate_host(my_IP_address)
+
+    if my_location[0] != None and my_location[1] != None:
+        return my_location
+    else:
+        raise Exception("Your location could not be found.")
 
 if __name__ == "__main__":
     main("google.com")
