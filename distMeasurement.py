@@ -55,7 +55,7 @@ def probe(IP_address):
 
     send_socket.settimeout(TIMEOUT)
     recv_socket.settimeout(TIMEOUT)
-    print "Setted Timeout for \n"
+    
     try:
         recv_socket.bind(("", port))
         send_socket.sendto("", (dest, port))
@@ -67,6 +67,7 @@ def probe(IP_address):
 
         recv_packet, recv_address = recv_socket.recvfrom(1500)
         recvd_time = time.time()
+        print "Recieved"
     except timeout:
         pass
     else:
