@@ -60,6 +60,7 @@ def probe(IP_address):
         recv_socket.bind(("", port))
         send_socket.sendto("", (dest, port))
         sent_time = time.time()
+        print "Sent"
 
         #ready = select.select([recv_socket], [], [], remaining_time)
 
