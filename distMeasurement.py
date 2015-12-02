@@ -52,7 +52,7 @@ def probe(IP_address):
     recv_socket.settimeout(TIMEOUT)
 
     try:
-        recv_socket.bind("", 33434)
+        recv_socket.bind(("", 33434))
         send_socket.sendto("", (dest, 33434))
         sent_time = time.time()
 
