@@ -17,14 +17,14 @@ def main():
 
     for host in target_hosts:
         host_location = locate_host(gethostbyname(host))
-        print "Host:\nLatitude: {}\nLongitude: {}\n".format(host_location[0], host_location[1])
+        print "Host:\nLatitude: {}\nLongitude: {}".format(host_location[0], host_location[1])
         shortest_distance = None
         if host_location[0] != None and host_location[1] != None:
             shortest_distance = calculate_distance(my_location, host_location)
         else:
             raise Exception("Host location could not be found.")
 
-        output_result = "Host: {}\nIP address: {}\nDistance: {}".format(host, gethostbyname(host), shortest_distance)
+        output_result = "Host: {}\nIP address: {}\nDistance: {}\n".format(host, gethostbyname(host), shortest_distance)
         print output_result
         output_file.write(output_result + "\n")
 
