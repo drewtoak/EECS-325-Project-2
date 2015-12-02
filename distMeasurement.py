@@ -48,8 +48,8 @@ def probe(IP_address):
 
     send_socket.setsockopt(SOL_IP, IP_TTL, ttl)
 
-    send_sock.settimeout(TIMEOUT)
-    recv_sock.settimeout(TIMEOUT)
+    send_socket.settimeout(TIMEOUT)
+    recv_socket.settimeout(TIMEOUT)
 
     try:
         recv_socket.bind("", 33434)
