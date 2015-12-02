@@ -1,0 +1,53 @@
+Name: Andrew Hwang
+EECS 325 Project 2
+
+Host: google.com
+Hops: 10
+RTT: 19.6459293365 ms
+The Destination IP address: 216.58.216.78 and port number: 33434 were verified.
+
+Host: facebook.com
+Hops: 13
+RTT: 22.2201347351 ms
+The Destination IP address: 66.220.156.68 and port number: 33434 were verified.
+
+Host: twitter.com
+Hops: 9
+RTT: 58.0050945282 ms
+The Destination IP address: 199.16.156.198 and port number: 33434 were verified.
+
+Host: stackoverflow.com
+Hops: 9
+RTT: 18.5310840607 ms
+The Destination IP address: 104.16.36.249 and port number: 33434 were verified.
+
+Host: java.com
+Hops: 8
+RTT: 17.2839164734 ms
+The Destination IP address: 23.202.228.67 and port number: 33434 were verified.
+
+Host: theverge.com
+Hops: 11
+RTT: 59.3810081482 ms
+The Destination IP address: 216.146.46.10 and port number: 33434 were verified.
+
+Host: change.org
+Hops: 9
+RTT: 23.5180854797 ms
+The Destination IP address: 104.16.4.13 and port number: 33434 were verified.
+
+Host: sephora.com
+Hops: 12
+RTT: 29.8929214478 ms
+The Destination IP address: 72.52.5.185 and port number: 33434 were verified.
+
+Host: telegraph.co.uk
+Hops: 8
+RTT: 18.5968875885 ms
+The Destination IP address: 23.15.8.153 and port number: 33434 were verified.
+
+Host: forever21.com
+Hops: 14
+RTT: 21.1889743805 ms
+The Destination IP address: 23.203.16.50 and port number: 33434 were verified.
+
