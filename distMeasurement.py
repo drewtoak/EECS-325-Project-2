@@ -45,7 +45,7 @@ def main():
 def probe(IP_address):
     ttl = TTL_START
     remaining_time = TIMEOUT
-    dest = gethostbyname(IP_address)
+    dest = IP_address
     port = 33434
 
     send_socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)
@@ -55,7 +55,7 @@ def probe(IP_address):
 
     send_socket.settimeout(TIMEOUT)
     recv_socket.settimeout(TIMEOUT)
-    
+
     try:
         recv_socket.bind(("", port))
         send_socket.sendto("", (dest, port))
