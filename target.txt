@@ -1,10 +1,10 @@
 google.com
 facebook.com
-youtube.com
-linkedin.com
-yahoo.com
-bing.com
-wikipedia.org
-vk.com
 twitter.com
 pinterest.com
+ask.com
+imgur.com
+stackoverflow.com
+go.com
+jd.com
+java.com
