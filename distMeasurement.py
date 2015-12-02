@@ -78,7 +78,7 @@ def probe(IP_address):
         number_hops = ttl - ip_ttl + 1
         rtt = 1000*(recvd_time - sent_time)
 
-        dest_ip = struct.unpack('!L', recv_packet[44:48])[0]
+        dest_ip = struct.unpack('!4s', recv_packet[44:48])[0]
         dest_port = struct.unpack("!H", recv_packet[50:52])[0]
 
         print "Destination IP: {}\nDestination Port: {}\n".format(dest_ip, dest_port)
