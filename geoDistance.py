@@ -1,4 +1,3 @@
-# import urllib2
 import json
 import requests
 from socket import gethostbyname
@@ -17,7 +16,7 @@ def main():
 
     for host in target_hosts:
         host_location = locate_host(gethostbyname(host))
-        print "Host:\nLatitude: {}\nLongitude: {}".format(host_location[0], host_location[1])
+        
         shortest_distance = None
         if host_location[0] != None and host_location[1] != None:
             shortest_distance = calculate_distance(my_location, host_location)
@@ -26,6 +25,7 @@ def main():
 
         output_result = "Host: {}\nIP address: {}\nDistance: {} km\n".format(host, gethostbyname(host), shortest_distance)
         print output_result
+        print "Latitude: {}\nLongitude: {}".format(host_location[0], host_location[1])
         output_file.write(output_result + "\n")
 
     input_file.close()
@@ -33,18 +33,6 @@ def main():
 
 
 def locate_host(IP_address):
-    # response_doc = urllib2.urlopen('http://freegeoip.net/xml/{}'.format(IP_address))
-    #
-    # latitude = longitude = None
-    #
-    # for line in response_doc:
-    #     if "Latitude" in line:
-    #         latitude = float(line.replace("<Latitude>", "").replace("</Latitude>", ""))
-    #     elif "Longitude" in line:
-    #         longitude = float(line.replace("<Longitude>", "").replace("</Longitude>", ""))
-    #
-    # response_doc.close()
-
     response = requests.get('http://freegeoip.net/json/{}'.format(IP_address))
     doc = json.loads(response.text)
 
