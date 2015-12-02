@@ -4,11 +4,33 @@ import requests
 from socket import gethostbyname
 from math import *
 
-def main(dest_name):
+def main():
     my_location = locate_self()
     print "Self:\nLatitude: {}\nLongitude: {}\n".format(my_location[0], my_location[1])
-    host_location = locate_host(gethostbyname(dest_name))
-    print "Host:\nLatitude: {}\nLongitude: {}\n".format(host_location[0], host_location[1])
+    if my_location[0] == None and my_location[1] == None:
+        raise Exception("Your location could not be found.")
+
+    input_file = open("target.txt")
+    output_file = open("geoDistance_results.txt", "w")
+
+    target_hosts = input_file.read.splitlines()
+
+    for host in target_hosts:
+        host_location = locate_host(gethostbyname(host))
+        print "Host:\nLatitude: {}\nLongitude: {}\n".format(host_location[0], host_location[1])
+        shortest_distance = None
+        if host_location[0] != None and host_location[1] != None:
+            shortest_distance = calculate_distance(my_location, host_location)
+        else:
+            raise Exception("Host location could not be found.")
+
+        output_result = "Host: {}\nIP address: {}\nDistance: {}".format(host, gethostbyname(host), shortest_distance)
+        print output_result
+        output_file.write(output_result + "\n")
+
+    input_file.close()
+    output_file.close()
+
 
 def locate_host(IP_address):
     # response_doc = urllib2.urlopen('http://freegeoip.net/xml/{}'.format(IP_address))
@@ -39,10 +61,20 @@ def locate_self():
 
     my_location = locate_host(my_IP_address)
 
-    if my_location[0] != None and my_location[1] != None:
-        return my_location
-    else:
-        raise Exception("Your location could not be found.")
+    return my_location
+
+def calculate_distance(start_coordinate, end_coordinate):
+    start_lat, start_long, end_lat, end_long = map(radians, [start_coordinate, end_coordinate])
+
+    lat_distance = end_lat - start_lat
+    long_distance = end_long - start_long
+
+    a = sin(lat_distance/2) * sin(lat_distance/2) + cos(start_lat) * cos(end_lat) * sin(long_distance/2) * sin(long_distance/2)
+    c = 2 * asin(sqrt(a))
+
+    shortest_distance = c * 6367
+
+    return shortest_distance
 
 if __name__ == "__main__":
-    main("google.com")
+    main()
