@@ -1,0 +1,28 @@
+Andrew Hwang
+ath50
+EECS 302 Project 2 README
+
+
+FILES:
+-----
+- target.txt
+- distMeasurement.py
+- results.txt
+EECS 425 extra credit:
+- geoDistance.py
+- geoDistance_results.txt
+
+HOW TO RUN:
+----------
+Be in the "<home-directory>/project2grading" and type in the command:
+  sudo python distMeasurement.py
+    enter the password
+    Should make a new results.txt file of all the hops and RTT values.
+
+  sudo python geoDistance.py
+    Should make a new geoDistance_results.txt file of all the distances.
+
+REFERENCES:
+----------
+https://blogs.oracle.com/ksplice/entry/learning_by_doing_writing_your
+http://www.movable-type.co.uk/scripts/latlong.html
