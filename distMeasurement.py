@@ -33,8 +33,6 @@ def main():
 
 def probe(IP_address):
     ttl = TTL_START
-    remaining_time = TIMEOUT
-    dest = IP_address
     port = 33434
 
     for retry in xrange(RETRIES):
@@ -48,7 +46,7 @@ def probe(IP_address):
 
         try:
             recv_socket.bind(("", port))
-            send_socket.sendto("", (dest, port))
+            send_socket.sendto("", (IP_address, port))
             sent_time = time.time()
 
             recv_packet = recv_address = None
@@ -73,7 +71,7 @@ def probe(IP_address):
             print "Destination IP: {}\nDestination Port: {}".format(dest_ip, dest_port)
 
             verified = None
-            if dest_ip == dest and dest_port == port:
+            if dest_ip == IP_address and dest_port == port:
                 verified = "The Destination IP address: {} and port number: {} were verified.\n".format(dest_ip, dest_port)
             else:
                 verified = "The Destination IP address and port number were not verified.\n"
