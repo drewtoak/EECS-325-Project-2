@@ -1,4 +1,4 @@
-import urllib2
+# import urllib2
 import json
 import requests
 from socket import gethostbyname
@@ -13,7 +13,7 @@ def main():
     input_file = open("target.txt")
     output_file = open("geoDistance_results.txt", "w")
 
-    target_hosts = input_file.read.splitlines()
+    target_hosts = input_file.read().splitlines()
 
     for host in target_hosts:
         host_location = locate_host(gethostbyname(host))
