@@ -1,10 +1,10 @@
-facebook.com
-cnet.com
-telegraph.co.uk
-life.com.tw
-elpais.com
-adscale.de
 google.com
+facebook.com
 youtube.com
+baidu.com
+yahoo.com
+amazon.com
+wikipedia.org
+qq.com
 twitter.com
-google.de
+taobao.com
