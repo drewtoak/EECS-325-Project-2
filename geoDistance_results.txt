@@ -10,27 +10,27 @@ IP address: 216.58.216.78
 Distance: 3468.17489436 km
 
 Host: facebook.com
-IP address: 69.171.230.68
-Distance: 1526.02969161 km
+IP address: 173.252.74.68
+Distance: 3476.62688776 km
 
 Host: twitter.com
-IP address: 199.16.156.6
+IP address: 199.16.156.70
 Distance: 3482.57150221 km
 
 Host: stackoverflow.com
-IP address: 104.16.35.249
+IP address: 104.16.37.249
 Distance: 3482.57150221 km
 
 Host: java.com
-IP address: 23.203.158.151
+IP address: 23.13.169.214
 Distance: 874.338558712 km
 
-Host: theverge.com
-IP address: 216.146.46.11
-Distance: 849.639830333 km
+Host: life.com.tw
+IP address: 104.20.28.85
+Distance: 3482.57150221 km
 
 Host: change.org
-IP address: 104.16.5.13
+IP address: 104.16.4.13
 Distance: 3482.57150221 km
 
 Host: sephora.com
@@ -38,10 +38,10 @@ IP address: 72.52.5.185
 Distance: 874.338558712 km
 
 Host: telegraph.co.uk
-IP address: 72.247.10.24
+IP address: 23.15.8.153
 Distance: 874.338558712 km
 
 Host: forever21.com
-IP address: 23.203.16.50
+IP address: 104.84.148.252
 Distance: 874.338558712 km
 
