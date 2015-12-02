@@ -6,13 +6,18 @@ from math import *
 def main():
     # Get the location of the current computer.
     my_location = locate_self()
-    print "Self:\nLatitude: {}\nLongitude: {}\n".format(my_location[0], my_location[1])
 
     if my_location[0] == None and my_location[1] == None:
         raise Exception("Your location could not be found.")
 
     input_file = open("target.txt")
     output_file = open("geoDistance_results.txt", "w")
+
+    output_file.write("Name: Andrew Hwang\n" + "EECS 325 Project 2\n" + "\n")
+
+    output_result = "Self:\nLatitude: {}\nLongitude: {}\n".format(my_location[0], my_location[1])
+    print output_result
+    output_file.write(output_result + "\n")
 
     target_hosts = input_file.read().splitlines()
 
