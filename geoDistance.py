@@ -1,5 +1,6 @@
 import urllib2
-import xml.dom.minidom
+import json
+import requests
 from socket import gethostbyname
 from math import *
 
@@ -7,18 +8,24 @@ def main(dest_name):
     location = locate_host(gethostbyname(dest_name))
 
 def locate_host(IP_address):
-    response = urllib2.urlopen("freegeoip.net/xml/{}".format(IP_address)).read
-    response_doc = xml.dom.minidom.parseString(response)
-    response.close()
-
-    city = response_doc.getElementsByTagName("City")[0]
-    region_name = response_doc.getElementsByTagName("RegionName")[0]
-    country_name = response_doc.getElementsByTagName("CountryName")[0]
-    latitude = response_doc.getElementsByTagName("Latitude")[0]
-    longitude = response_doc.getElementsByTagName("Longitude")[0]
-
-    print city, region_name, country_name, latitude, longitude
-    return city, region_name, country_name, latitude, longitude
+    # response_doc = urllib2.urlopen('http://freegeoip.net/xml/{}'.format(IP_address))
+    #
+    # latitude = longitude = None
+    #
+    # for line in response_doc:
+    #     if "Latitude" in line:
+    #         latitude = float(line.replace("<Latitude>", "").replace("</Latitude>", ""))
+    #     elif "Longitude" in line:
+    #         longitude = float(line.replace("<Longitude>", "").replace("</Longitude>", ""))
+    #
+    # response_doc.close()
+    response = 'http://freegeoip.net/json/{}'.format(IP_address)
+    r = requests.get(response)
+    j = json.loads(r.text)
+    latitude = j['latitude']
+    Longitude = j['longitude']
+    print "Latitude: {}\nLongitude: {}\n".format(latitude, longitude)
+    return latitude, longitude
 
 if __name__ == "__main__":
     main("google.com")
