@@ -31,9 +31,13 @@ def main(host_name):
     # output_file.close()
 
     result = probe(gethostbyname(host_name))
-    if result[0] is not None:
-        output_result = "Host: {}\nHops: {}\nRTT: {} ms\n".format(host_name, result[0], result[1])
-        print output_result
+    if result is not None:
+        if result[0] is not None:
+            output_result = "Host: {}\nHops: {}\nRTT: {} ms\n".format(host_name, result[0], result[1])
+            print output_result
+        else:
+            output_result = "Host: {}\nHost timed out.\n".format(host_name)
+            print output_result
     else:
         output_result = "Host: {}\nHost timed out.\n".format(host_name)
         print output_result
