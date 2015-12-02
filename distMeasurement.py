@@ -8,39 +8,39 @@ import select
 TTL_START = 32
 TIMEOUT = 2.0
 
-def main(host_name):
-    #input_file = open("target.txt")
-    #output_file = open("results.txt", "w")
+def main():
+    input_file = open("target.txt")
+    output_file = open("results.txt", "w")
 
-    #output_file.write("Name: Andrew Hwang\n" + "EECS 325 Project 2\n" + "\n")
+    output_file.write("Name: Andrew Hwang\n" + "EECS 325 Project 2\n" + "\n")
 
-    #target_hosts = input_file.read().splitlines()
+    target_hosts = input_file.read().splitlines()
 
-    # for host in target_hosts:
-    #     result = probe(gethostbyname(host))
-        # if result[0] is not None:
-        #     output_result = "Host: {}\nHops: {}\nRTT: {} ms\n".format(host, result[0], result[1])
-        #     print output_result
-        #     output_file.write(output_result + "\n")
-        # else:
-        #     output_result = "Host: {}\nHost timed out.\n".format(host)
-        #     print output_result
-        #     output_file.write(output_result + "\n")
-
-    # input_file.close()
-    # output_file.close()
-
-    result = probe(gethostbyname(host_name))
-    if result is not None:
-        if result[0] is not None:
-            output_result = "Host: {}\nHops: {}\nRTT: {} ms\n".format(host_name, result[0], result[1])
+    for host in target_hosts:
+        result = probe(gethostbyname(host))
+        if result is not None:
+            output_result = "Host: {}\nHops: {}\nRTT: {} ms\n".format(host, result[0], result[1])
             print output_result
+            output_file.write(output_result + "\n")
         else:
-            output_result = "Host: {}\nHost timed out.\n".format(host_name)
+            output_result = "Host: {}\nHost timed out.\n".format(host)
             print output_result
-    else:
-        output_result = "Host: {}\nHost timed out.\n".format(host_name)
-        print output_result
+            output_file.write(output_result + "\n")
+
+    input_file.close()
+    output_file.close()
+
+    # result = probe(gethostbyname(host_name))
+    # if result is not None:
+    #     if result[0] is not None:
+    #         output_result = "Host: {}\nHops: {}\nRTT: {} ms\n".format(host_name, result[0], result[1])
+    #         print output_result
+    #     else:
+    #         output_result = "Host: {}\nHost timed out.\n".format(host_name)
+    #         print output_result
+    # else:
+    #     output_result = "Host: {}\nHost timed out.\n".format(host_name)
+    #     print output_result
 
 def probe(IP_address):
     ttl = TTL_START
@@ -84,4 +84,4 @@ def probe(IP_address):
         recv_socket.close()
 
 if __name__ == "__main__":
-    main("google.com")
+    main()
