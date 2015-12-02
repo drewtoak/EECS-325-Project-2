@@ -64,7 +64,7 @@ def locate_self():
     return my_location
 
 def calculate_distance(start_coordinate, end_coordinate):
-    start_lat, start_long, end_lat, end_long = map(radians, [start_coordinate, end_coordinate])
+    start_lat, start_long, end_lat, end_long = map(radians, [start_coordinate[0], start_coordinate[1], end_coordinate[0], end_coordinate[1]])
 
     lat_distance = end_lat - start_lat
     long_distance = end_long - start_long
