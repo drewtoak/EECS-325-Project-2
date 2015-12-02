@@ -48,10 +48,10 @@ def probe(IP_address):
     dest = IP_address
     port = 33434
 
-    send_socket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)
-    recv_socket = socket(AF_INET, SOCK_RAW, IPPROTO_ICMP)
+    send_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+    recv_socket = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_ICMP)
 
-    send_socket.setsockopt(SOL_IP, IP_TTL, ttl)
+    send_socket.setsockopt(socket.SOL_IP, socket.IP_TTL, ttl)
 
     send_socket.settimeout(TIMEOUT)
     recv_socket.settimeout(TIMEOUT)
@@ -78,8 +78,8 @@ def probe(IP_address):
         number_hops = ttl - ip_ttl + 1
         rtt = 1000*(recvd_time - sent_time)
 
-        dest_ip = struct.unpack('!4s', recv_packet[44:48])[0]
-        dest_port = struct.unpack("!H", recv_packet[50:52])[0]
+        dest_ip = struct.unpack_from('!4s', recv_packet[44:48])
+        dest_port = struct.unpack_from("!H", recv_packet[50:52])
 
         print "Destination IP: {}\nDestination Port: {}\n".format(dest_ip, dest_port)
 
