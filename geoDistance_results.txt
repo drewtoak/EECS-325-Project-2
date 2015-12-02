@@ -1,21 +1,28 @@
+Name: Andrew Hwang
+EECS 325 Project 2
+
+Self:
+Latitude: 41.5074
+Longitude: -81.6053
+
 Host: google.com
 IP address: 216.58.216.78
 Distance: 3468.17489436 km
 
 Host: facebook.com
-IP address: 173.252.74.68
-Distance: 3476.62688776 km
+IP address: 69.171.230.68
+Distance: 1526.02969161 km
 
 Host: twitter.com
-IP address: 199.16.156.70
+IP address: 199.16.156.6
 Distance: 3482.57150221 km
 
 Host: stackoverflow.com
-IP address: 104.16.37.249
+IP address: 104.16.35.249
 Distance: 3482.57150221 km
 
 Host: java.com
-IP address: 23.202.228.67
+IP address: 23.203.158.151
 Distance: 874.338558712 km
 
 Host: theverge.com
@@ -31,10 +38,10 @@ IP address: 72.52.5.185
 Distance: 874.338558712 km
 
 Host: telegraph.co.uk
-IP address: 72.247.9.219
-Distance: 557.941352657 km
+IP address: 72.247.10.24
+Distance: 874.338558712 km
 
 Host: forever21.com
-IP address: 23.220.35.72
+IP address: 23.203.16.50
 Distance: 874.338558712 km
 
