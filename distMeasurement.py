@@ -92,7 +92,7 @@ def probe(IP_address):
                 if icmp_type == 3 and icmp_code == 3:
                     verified = "The Destination IP address: {} and port number: {} match.\n".format(dest_ip, dest_port)
                 else:
-                    verified = "The ICMP type and code were incorrect."
+                    verified = "The ICMP type {} and code {} were incorrect.\n".format(icmp_type, icmp_code)
             else:
                 verified = "The Destination IP address and port number do not match.\n"
 
