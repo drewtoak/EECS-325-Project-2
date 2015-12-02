@@ -31,7 +31,7 @@ def main(host_name):
     # output_file.close()
 
     result = probe(gethostbyname(host_name))
-    if result[0] is not 0:
+    if result[0] is not None:
         output_result = "Host: {}\nHops: {}\nRTT: {} ms\n".format(host_name, result[0], result[1])
         print output_result
     else:
@@ -56,7 +56,7 @@ def probe(IP_address):
         send_socket.sendto("", (dest, 33434))
         sent_time = time.time()
 
-        ready = select.select([recv_socket], [], [], remaining_time)
+        #ready = select.select([recv_socket], [], [], remaining_time)
 
         recv_packet = recv_address = None
 
