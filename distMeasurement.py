@@ -70,13 +70,13 @@ def probe(IP_address):
             dest_ip = inet_ntoa(struct.pack('!L', long_ip))
             dest_port = struct.unpack("!H", recv_packet[50:52])[0]
 
-            print "Destination IP: {}\nDestination Port: {}\n".format(dest_ip, dest_port)
+            print "Destination IP: {}\nDestination Port: {}".format(dest_ip, dest_port)
 
             verified = None
             if dest_ip == dest and dest_port == port:
-                verified = "The Destination IP address: {} and port number: {} were verified.".format(dest_ip, dest_port)
+                verified = "The Destination IP address: {} and port number: {} were verified.\n".format(dest_ip, dest_port)
             else:
-                verified = "The Destination IP address and port number were not verified."
+                verified = "The Destination IP address and port number were not verified.\n"
 
             return number_hops, rtt, verified
         except (timeout, error):
