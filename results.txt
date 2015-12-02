@@ -3,51 +3,51 @@ EECS 325 Project 2
 
 Host: google.com
 Hops: 10
-RTT: 13.6911869049 ms
-The Destination IP address: 216.58.216.78 and port number: 33434 match.
+RTT: 24.4660377502 ms
+The Destination IP address: 216.58.216.206 and port number: 33434 match.
 
 Host: facebook.com
 Hops: 15
-RTT: 81.5079212189 ms
+RTT: 75.7918357849 ms
 The Destination IP address: 66.220.146.36 and port number: 33434 match.
 
 Host: twitter.com
 Hops: 9
-RTT: 43.4648990631 ms
-The Destination IP address: 199.16.156.102 and port number: 33434 match.
+RTT: 47.7459430695 ms
+The Destination IP address: 199.16.156.198 and port number: 33434 match.
 
 Host: stackoverflow.com
 Hops: 9
-RTT: 22.9408740997 ms
-The Destination IP address: 104.16.33.249 and port number: 33434 match.
+RTT: 52.0520210266 ms
+The Destination IP address: 104.16.35.249 and port number: 33434 match.
 
 Host: java.com
 Hops: 8
-RTT: 10.3480815887 ms
-The Destination IP address: 23.13.169.214 and port number: 33434 match.
+RTT: 10.4451179504 ms
+The Destination IP address: 23.203.158.151 and port number: 33434 match.
 
 Host: life.com.tw
 Hops: 9
-RTT: 47.3530292511 ms
-The Destination IP address: 104.20.29.85 and port number: 33434 match.
+RTT: 19.3409919739 ms
+The Destination IP address: 104.20.28.85 and port number: 33434 match.
 
 Host: change.org
 Hops: 9
-RTT: 22.9949951172 ms
-The Destination IP address: 104.16.5.13 and port number: 33434 match.
+RTT: 27.0738601685 ms
+The Destination IP address: 104.16.4.13 and port number: 33434 match.
 
 Host: sephora.com
 Hops: 12
-RTT: 28.6920070648 ms
+RTT: 28.2189846039 ms
 The Destination IP address: 72.52.5.185 and port number: 33434 match.
 
 Host: telegraph.co.uk
-Hops: 8
-RTT: 11.2428665161 ms
-The Destination IP address: 23.15.8.153 and port number: 33434 match.
+Hops: 12
+RTT: 23.5981941223 ms
+The Destination IP address: 72.247.9.219 and port number: 33434 match.
 
-Host: forever21.com
-Hops: 19
-RTT: 27.2831916809 ms
-The Destination IP address: 23.220.35.72 and port number: 33434 match.
+Host: genius.com
+Hops: 9
+RTT: 18.728017807 ms
+The Destination IP address: 104.16.43.66 and port number: 33434 match.
 

@@ -6,11 +6,11 @@ Latitude: 41.5074
 Longitude: -81.6053
 
 Host: google.com
-IP address: 216.58.216.78
+IP address: 216.58.216.206
 Distance: 3468.17489436 km
 
 Host: facebook.com
-IP address: 173.252.74.68
+IP address: 66.220.146.36
 Distance: 3476.62688776 km
 
 Host: twitter.com
@@ -18,11 +18,11 @@ IP address: 199.16.156.70
 Distance: 3482.57150221 km
 
 Host: stackoverflow.com
-IP address: 104.16.37.249
+IP address: 104.16.36.249
 Distance: 3482.57150221 km
 
 Host: java.com
-IP address: 23.13.169.214
+IP address: 23.203.158.151
 Distance: 874.338558712 km
 
 Host: life.com.tw
@@ -38,10 +38,10 @@ IP address: 72.52.5.185
 Distance: 874.338558712 km
 
 Host: telegraph.co.uk
-IP address: 23.15.8.153
-Distance: 874.338558712 km
+IP address: 107.14.43.178
+Distance: 1898.56335858 km
 
-Host: forever21.com
-IP address: 104.84.148.252
-Distance: 874.338558712 km
+Host: genius.com
+IP address: 104.16.41.66
+Distance: 3482.57150221 km
 
