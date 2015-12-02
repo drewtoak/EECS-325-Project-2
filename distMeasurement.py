@@ -61,9 +61,6 @@ def probe(IP_address):
         send_socket.sendto("", (dest, port))
         sent_time = time.time()
 
-        ready = select.select([recv_socket], [], [], remaining_time)
-        print "Ready"
-
         recv_packet = recv_address = None
 
         recv_packet, recv_address = recv_socket.recvfrom(1500)
