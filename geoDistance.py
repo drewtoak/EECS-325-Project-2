@@ -6,7 +6,9 @@ from math import *
 
 def main(dest_name):
     my_location = locate_self()
+    print "Self:\nLatitude: {}\nLongitude: {}\n".format(latitude, longitude)
     location = locate_host(gethostbyname(dest_name))
+    print "Host:\nLatitude: {}\nLongitude: {}\n".format(latitude, longitude)
 
 def locate_host(IP_address):
     # response_doc = urllib2.urlopen('http://freegeoip.net/xml/{}'.format(IP_address))
@@ -29,7 +31,6 @@ def locate_host(IP_address):
     latitude = doc['latitude']
     longitude = doc['longitude']
 
-    print "Latitude: {}\nLongitude: {}\n".format(latitude, longitude)
     return latitude, longitude
 
 def locate_self():
