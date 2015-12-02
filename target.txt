@@ -1,10 +1,10 @@
 google.com
 facebook.com
 youtube.com
-baidu.com
+linkedin.com
 yahoo.com
-amazon.com
+bing.com
 wikipedia.org
-qq.com
+vk.com
 twitter.com
-taobao.com
+pinterest.com
